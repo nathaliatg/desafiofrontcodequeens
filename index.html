@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Order Dashboard</title>
+    
+    <link rel="stylesheet" href="styles.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <main class="dashboard-container">
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="img/plate-logo.png" alt="Food Order Logo"> </div>
+            <nav class="main-nav">
+                <ul>
+                    <li class="active"><a href="#"><i class="fas fa-home"></i></a></li>
+                    <li><a href="#"><i class="fas fa-search"></i></a></li>
+                    <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                    <li><a href="#"><i class="fas fa-bookmark"></i></a></li>
+                    <li><a href="#"><i class="fas fa-cog"></i></a></li>
+                </ul>
+            </nav>
+            <div class="logout">
+                <a href="#"><i class="fas fa-sign-out-alt"></i></a>
+            </div>
+        </aside>
+
+        <section class="main-content">
+            <header class="main-header">
+                <div>
+                    <p class="welcome-text">Welcome</p>
+                    <h2 class="page-title">Let's Order Your Food</h2>
+                </div>
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search">
+                </div>
+                <div class="user-profile">
+                    <i class="fas fa-bell"></i> <img src="img/Picsart_25-08-19_22-58-01-260.jpg" alt="User Profile"> </div>
+            </header>
+
+            <div class="promo-banner">
+                <div class="banner-text">
+                    <h3>Order Food and Get<br>Discounts Up To</h3>
+                    <h1>50% Off</h1>
+                </div>
+                <div class="banner-image">
+                    <img src="img/main-characters.png" alt="Promo Characters">
+                </div>
+            </div>
+
+            <div class="category-section">
+                <h3>Category</h3>
+                <div class="category-list">
+                    <div class="category-button active">
+                        <span class="emoji">🍔</span>
+                        <span>Burger</span>
+                    </div>
+                    <div class="category-button">
+                        <span class="emoji">🍕</span>
+                        <span>Pizza</span>
+                    </div>
+                    <div class="category-button">
+                        <span class="emoji">🍦</span>
+                        <span>Ice Cream</span>
+                    </div>
+                    <div class="category-button">
+                        <span class="emoji">🍟</span>
+                        <span>Snack</span>
+                    </div>
+                    <div class="category-button">
+                        <span class="emoji">🥤</span>
+                        <span>Drink</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="popular-menu">
+                <div class="menu-header">
+                    <h3>Popular Menu</h3>
+                    <a href="#" class="see-all">See All</a>
+                </div>
+                <div class="menu-list">
+                    <div class="product-card">
+                        <div class="fire-icon-container"> 🔥 </div>
+                        <img src="img/beefburger.png" alt="Beef Burger" class="product-image">
+                        <p class="product-name">Beef Burger</p>
+                        <div class="product-info">
+                            <span>20min</span>
+                            <span>2.2km</span>
+                        </div>
+                        <p class="product-price">$35.00</p>
+                    </div>
+                    <div class="product-card">
+                        <div class="fire-icon-container"> 🔥 </div>
+                        <img src="img/cheeseburger.png" alt="Cheese Burger" class="product-image">
+                        <p class="product-name">Cheese Burger</p>
+                        <div class="product-info">
+                            <span>20min</span>
+                            <span>2.2km</span>
+                        </div>
+                        <p class="product-price">$30.00</p>
+                    </div>
+                    <div class="product-card">
+                        <div class="fire-icon-container"> 🔥 </div>
+                        <img src="img/chickenburger.png" alt="Chicken Burger" class="product-image">
+                        <p class="product-name">Chicken Burger</p>
+                        <div class="product-info">
+                            <span>20min</span>
+                            <span>2.2km</span>
+                        </div>
+                        <p class="product-price">$29.00</p>
+                    </div>
+                    <div class="product-card">
+                        <div class="fire-icon-container"> 🔥 </div>
+                        <img src="img/blackburger.png" alt="Black Burger" class="product-image">
+                        <p class="product-name">Black Burger</p>
+                        <div class="product-info">
+                            <span>20min</span>
+                            <span>2.2km</span>
+                        </div>
+                        <p class="product-price">$30.00</p>
+                    </div>
+                    </div>
+            </div>
+        </section>
+
+        </section>
+
+<section class="right-sidebar">
+    <div class="product-detail-card">
+        <i class="favorite-icon fas fa-heart"></i>
+        <img src="img/beefburger.png" alt="Beef Burger" class="main-product-image">
+        <div class="product-header-info">
+            <h2 class="product-title">Beef Burger</h2>
+            <div class="product-price-large">$30.00</div>
+        </div>
+        <div class="product-delivery-info">
+            20Min • 2.5Km
+        </div>
+        <div class="product-stats">
+            <div class="stat-item"><i class="fas fa-star"></i> <span>4.5k</span></div>
+            <div class="stat-item"><i class="fas fa-clock"></i> <span>20Min</span></div>
+            <div class="stat-item"><i class="fas fa-fire"></i> <span>30kcal</span></div>
+        </div>
+        <p class="product-description">A cheeseburger is a hamburger topped with cheese. Traditionally, the slice of cheese is placed on top of the meat patty.</p>
+        <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+
+    <div class="delivery-banner">
+        <h3>Faster Delivery and Get Free Shipping If You Subscribe</h3>
+        <img src="img/scooter.png" alt="Delivery Scooter" class="delivery-scooter">
+        <form class="email-form">
+            <input type="email" placeholder="Enter your email">
+            <button type="submit">Subscribe</button>
+        </form>
+    </div>
+</section>

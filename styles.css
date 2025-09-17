@@ -1,0 +1,578 @@
+/* ======================== */
+/* 1. Reset & Base Styles  */
+/* ======================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #ff914d;
+    --background-body: #e8f5fd; 
+    --background-sections: #f7f9fd;
+    --background-white: #ffffff;
+    --background-blue: #174c74; 
+    --text-dark: #333333;
+    --text-medium: #4b5264;
+    --text-light: #a0a6b5;
+    --border-radius-base: 20px;
+    --border-radius-large: 30px;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: var(--background-body);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: var(--text-medium);
+    font-size: 16px;
+}
+
+/* ======================== */
+/* 2. Main Layout  */
+/* ======================== */
+
+.dashboard-container {
+    display: grid;
+    grid-template-columns: 70px 1fr 320px;
+    width: 100%;
+    max-width: 1250px;
+    background-color: var(--background-white); 
+    border-radius: var(--border-radius-large);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+    padding: 25px;
+    gap: 25px;
+}
+
+/* ======================== */
+/* 3. Sidebar  */
+/* ======================== */
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    background-color: var(--background-blue);
+    border-radius: var(--border-radius-base);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+}
+
+.main-nav a,
+.logout a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.main-nav a:hover,
+.logout a:hover {
+    background-color: var(--background-sections);
+}
+
+.main-nav a i,
+.logout a i {
+    font-size: 16px;
+    color: var(--background-white);
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.main-nav a:hover i,
+.logout a:hover i {
+    opacity: 1;
+}
+
+.main-nav .active a {
+    background-color: #4884b3;
+    box-shadow: 0 5px 15px rgba(77, 127, 255, 0.4);
+}
+
+.main-nav .active a i {
+    opacity: 1;
+}
+
+/* ======================== */
+/* 4. Main Content  */
+/* ======================== */
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding-right: 15px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary-color) transparent;
+    background-color: var(--background-body);
+    border-radius: var(--border-radius-base);
+    padding: 25px;
+}
+
+.main-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.main-content::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.main-content::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    border: 2px solid transparent;
+}
+
+/* Header */
+.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 5px;
+}
+
+.welcome-text {
+    font-size: 14px;
+    color: var(--text-light);
+}
+
+.page-title {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-top: 2px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: var(--background-white);
+    border-radius: 10px;
+    padding: 10px 20px;
+    flex-grow: 1;
+    max-width: 250px;
+    margin: 0 25px;
+}
+
+.search-bar i {
+    font-size: 22px;
+    margin-right: 12px;
+    color: var(--text-light);
+}
+
+.search-bar input {
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 15px;
+    color: var(--text-medium);
+    flex-grow: 1;
+    padding: 2px 0;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.user-profile i {
+    font-size: 22px;
+    color: var(--text-medium);
+    background-color: var(--background-sections);
+    border-radius: 50%;
+    padding: 8px;
+}
+
+.user-profile img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Promo Banner */
+.promo-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background-blue);
+    border-radius: var(--border-radius-base);
+    padding: 25px 35px;
+    min-height: 160px;
+    color: var(--background-white);
+}
+
+.promo-banner h3 {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+.promo-banner h1 {
+    font-size: 50px;
+    font-weight: 800;
+    color: #ffffff;
+    margin-top: 10px;
+}
+
+.promo-banner .banner-image img {
+    height: 140px;
+    object-fit: contain;
+}
+
+/* Category Section */
+.category-section h3 {
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.category-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 15px;
+}
+
+.category-button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    padding: 10px 0;
+    height: 80px;
+    border: none;
+    border-radius: var(--border-radius-base);
+    background-color: var(--background-white);
+    color: var(--text-medium);
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+.category-button:hover {
+    background-color: var(--background-sections);
+}
+
+.category-button .emoji {
+    font-size: 30px;
+    line-height: 1;
+    margin-bottom: 0;
+}
+
+.category-button span {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.category-button.active {
+    background-color: var(--primary-color);
+    color: var(--background-white);
+    box-shadow: 0 5px 15px rgba(255, 145, 77, 0.4);
+}
+
+/* Popular Menu */
+.popular-menu .menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.popular-menu .menu-header h3 {
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.popular-menu .menu-header .see-all {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.menu-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--background-white);
+    border-radius: var(--border-radius-base);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.fire-icon-container {
+    position: absolute; /* Permite posicionamento livre */
+    top: 10px; /* Distância do topo */
+    right: 10px; /* Distância da esquerda */
+    z-index: 2; /* Garante que o ícone fique acima da imagem */
+    font-size: 1.5em; /* Aumenta o tamanho do ícone */
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo semi-transparente para destacar */
+    border-radius: 50%; /* Faz um círculo */
+    padding: 5px; /* Adiciona um espaço ao redor do ícone */
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.product-card .product-image {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.product-card .product-name {
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--text-dark);
+}
+
+.product-card .product-info {
+    display: flex;
+    gap: 10px;
+    font-size: 12px;
+    color: var(--text-light);
+    margin-bottom: 10px;
+}
+
+.product-card .product-price {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+/* ======================== */
+/* 5. Product Details Panel  */
+/* ======================== */
+
+/* Product Detail Card */
+.product-detail-card {
+    max-height: 400px;
+    flex: 2;
+    background-color: #f0f6fc;
+    border-radius: var(--border-radius-base);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+    /* Ajuste as bordas do card */
+    border-radius: 20px;
+}
+
+.product-detail-card .favorite-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 24px;
+    cursor: pointer;
+    /* Cor do coração */
+    color: #ff6b6b;
+    font-size: 24px;
+}
+
+.product-detail-card .main-product-image {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 10px;
+    align-self: center;
+}
+
+.product-header-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.product-detail-card .product-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-dark);
+    text-align: left;
+    line-height: 1.2;
+}
+
+.product-detail-card .product-price-large {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-dark);
+    text-align: right;
+}
+
+.product-delivery-info {
+    width: 100%;
+    text-align: left;
+    font-size: 12px;
+    color: var(--text-light);
+    margin-bottom: 15px;
+}
+
+.product-detail-card .product-stats {
+    display: flex;
+    justify-content: space-between; /* Justificar o espaçamento */
+    gap: 10px;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.product-detail-card .stat-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 12px;
+    color: var(--text-medium);
+}
+
+.product-detail-card .stat-item i {
+    font-size: 16px;
+    margin-right: 5px;
+    color: var(--primary-color);
+}
+
+/* Adicionando estilo para o texto em negrito */
+.product-detail-card .stat-item span {
+    font-weight: 700; /* Texto em negrito */
+    color: var(--text-dark); /* Cor escura para o texto */
+}
+
+.product-detail-card .product-description {
+    font-size: 12px;
+    line-height: 1.4;
+    color: var(--text-medium);
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.add-to-cart-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--primary-color);
+    color: var(--background-white);
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: var(--border-radius-base);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #ff7d33;
+}
+
+.right-sidebar {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Delivery Banner */
+.delivery-banner {
+    background-color: #f0f6fc;
+    border-radius: 80px 80px 20px 20px;
+    padding: 20px;
+    margin-top: 50px;
+    position: relative; /* Adicione esta linha */
+    overflow: visible;  /* Permite que o scooter "saia" */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    flex-grow: 1; /* Ajuste a altura para dar mais espaço */
+}
+
+.delivery-banner h3 {
+    margin-bottom: 20px; /* Adiciona um espaço abaixo do título para o formulário */
+    font-weight: 900; /* Pode ajustar conforme seu design */
+    text-align: center;
+    color:var(--text-dark); /* Pode ajustar conforme seu design */
+}
+
+.delivery-banner .delivery-scooter {
+    width: 250px;
+    height: auto;
+    object-fit: contain;
+    position: absolute; /* Posição em relação ao banner */
+    top: -60px; /* Sobe a imagem 60px acima do topo do banner */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Ajusta o centro */
+    z-index: 2; /* Garante que ela apareça em cima */
+}
+
+.email-form {
+    display: flex;
+    background-color: var(--background-white);
+    align-items: center;
+    border-radius: 15px;
+    padding: 8px;
+    position: relative;
+    z-index: 3;
+    width: 90%;
+    margin: 0 auto; /* Centraliza o formulário */
+    /* Remove o margin-top que estava aqui, agora o margin-bottom do h3 dará o espaçamento */
+}
+
+.email-form input {
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    padding: 4px;
+    font-size: 13px;
+    background-color: transparent;
+    color: var(--text-medium);
+}
+
+.email-form button {
+    background-color: var(--primary-color);
+    color: var(--background-white);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 500;
+    min-width: 80px;
+    transition: background-color 0.3s;
+    margin-left: -20px;
+}
+
+.email-form button:hover {
+    background-color: #ff7d33;
+}
